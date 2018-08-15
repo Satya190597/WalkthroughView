@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Directive</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h4 v-on:click="number++">Number Of Clicks : {{number}}</h4>
+		<!-- Alternative @click="number++" -->
+		<form @submit.prevent="refresh++">
+			<input type="submit" value="Refresh">
+			<p>Rate Of Refresh : {{refresh}}</p>
+		</form>
+	</div>
+</body>
+<script>
+	let vu = new Vue({
+		el:'#app',
+		data:{
+			number:0,
+			refresh:0
+		}
+	})
+</script>
+</html>
