@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Interpolation</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h3>Message      : {{message}}</h3>
+		<h3>Number       : {{number}}</h3>
+		<h3>Active       : {{isActive ? 'User Is Active' : 'User Is Not Active'}}</h3>
+		<h3>Manipulation : {{message.split(' ').reverse().join('')}}</h3>
+	</div>
+</body>
+<script>
+	let vm = new Vue({
+		el:'#app',
+		data:{
+			'number':10,
+			'message':'Hello World',
+			'isActive':true
+		}
+	})
+</script>
+</html>
