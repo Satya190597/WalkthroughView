@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Binding Inline Style</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<table>
+			<tr>
+				<td>Font Size</td>
+				<td>
+					<select v-model="styleObject.fontSize">
+						<option value='10px'>10</option>
+						<option value='50px'>50</option>
+						<option value='100px'>100</option>
+						<option value='150px'>150</option>
+						<option value='200px'>200</option>
+						<option value='250px'>250</option>
+					</select>
+				</td>
+				<td>Color</td>
+				<td>
+					<select v-model="styleObject.color">
+						<option value='black'>ORANGE</option>
+						<option value='red'>RED</option>
+						<option value='blue'>BLUE</option>
+						<option value='green'>GREEN</option>
+						<option value='orange'>ORANGE</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<h3 :style="styleObject">{{message}}</h3>
+	</div>
+</body>
+<script>
+	let vu = new Vue({
+		el:"#app",
+		data:{
+			message:"Hello World",
+			styleObject:{
+				fontSize:'10px',
+				color:'black'
+			}
+		}
+	})
+</script>
+</html>
