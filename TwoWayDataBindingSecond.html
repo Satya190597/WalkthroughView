@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Two Way Data Dinding Two</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h3>Select Items</h3>
+		<form>
+			<input type="checkbox" value="Pencil" v-model='option' >Pencil<br>
+			<input type="checkbox" value="Copy" v-model='option' >Copy<br>
+			<input type="checkbox" value="Pen" v-model='option' >Pen<br>
+			<input type="checkbox" value="Book" v-model='option' >Book<br>
+		</form>
+		<h3>You Have Selected : {{option.join(',')}}</h3>
+	</div>
+</body>
+<script>
+	let vu = new Vue({
+		el:'#app',
+		data:{
+			option:[]
+		}
+	})
+</script>
+</html>
