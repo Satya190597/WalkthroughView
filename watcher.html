@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Watcher</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="radio" name="age" v-model='isActive' value='false'>Below 18
+		<input type="radio" name="age" v-model='isActive' value='true'>Above 18
+		<h4>{{message}}</h4>
+	</div>
+</body>
+<script type="text/javascript">
+	let vu = new Vue({
+		el:"#app",
+		data:{
+			isActive:false,
+			message:'Not Eligible To Vote'
+		},
+		watch:{
+			isActive: function(flag){
+				console.log(flag)
+				flag=='true' ? this.message='Eligible To Vote' : this.message='Not Eligible To Vote';
+			}
+		}
+	})
+</script>
+</html>
