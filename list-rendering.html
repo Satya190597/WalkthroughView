@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>List Rendering</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h4>Student List</h4>
+		<table>
+			<tr>
+				<td>Slno</td>
+				<td>Regno</td>
+				<td>Name</td>
+			</tr>
+			<tr v-for="student in students">
+				<td>{{student.id}}</td>
+				<td>{{student.regno}}</td>
+				<td>{{student.name}}</td>
+			</tr>
+		</table>
+	</div>
+</body>
+<script type="text/javascript">
+	let vu = new Vue({
+		el:"#app",
+		data:{
+			students:[
+			{id:1,regno:150301120035,name:'satya prakash nandy'},
+			{id:2,regno:150301120034,name:'soubhagya kar'},
+			{id:3,regno:150301120033,name:'aslam malik'}]
+		}
+	})
+</script>
+</html>
