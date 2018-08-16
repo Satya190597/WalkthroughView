@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class Binding Styling</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+	<style>
+		.active
+		{
+			color:green;
+		}
+		.inactive
+		{
+			color:red;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		Ative Vate Link
+		<select v-model="isActive">
+			<option value="true">Activate</option>
+			<option value="false">Deactivate</option>
+		</select>
+		<a href="https://www.google.co.in" :class="[isActive ? 'active':'inactive']">Link</a>
+		<p>{{isActive}}</p>
+	</div>
+</body>
+<script>
+	new Vue({
+		el:"#app",
+		data:{
+			isActive:false,
+		}
+	})
+</script>
+</html>

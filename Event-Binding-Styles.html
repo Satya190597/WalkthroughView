@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Binding</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<button @click="message">Hello To My Console !</button><br><br>
+		<button @click="increaseFont">Increase</button>
+		<button @click="decreaseFont">Decrease</button>
+		<h3 :style="{fontSize:fontSize+'px'}">Hello World</h3>		
+	</div>
+</body>
+<script type="text/javascript">
+	new Vue({
+		el:"#app",
+		data:{
+			fontSize:10
+		},
+		methods:{
+			message:function(){
+				console.log('Hello !');
+			},
+			increaseFont:function(){
+				this.fontSize++;
+			},
+			decreaseFont:function(){
+				if(this.fontSize>=10)
+					this.fontSize--;
+			}
+		}
+	})
+</script>
+</html>
