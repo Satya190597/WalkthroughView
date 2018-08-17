@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Component</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<message></message>
+	</div>
+</body>
+<script>
+	Vue.component("message",{
+		template:"<h1 style='color:red' >Hello VueJS User</h1>"
+	})
+	let vu = new Vue({
+		el:"#app"
+	})
+</script>
+</html>
